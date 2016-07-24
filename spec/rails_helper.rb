@@ -23,6 +23,9 @@ require 'rspec/rails'
 # Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 # Checks for pending migrations before tests are run.
+if ActiveRecord::Migrator.needs_migration?
+  ActiveRecord::Migrator.migrate(File.join(Rails.root, 'db/migrate'))
+end
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.check_pending!
 
