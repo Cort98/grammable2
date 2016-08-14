@@ -15,6 +15,10 @@ gem 'sass-rails'
 
 gem 'carrierwave'
 
+gem 'figaro'
+
+gem 'fog'
+
 gem 'simple_form'
 
 gem 'devise'
